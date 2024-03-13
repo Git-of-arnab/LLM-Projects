@@ -1,0 +1,48 @@
+Initialize git for the current active directory:(run git init)
+Without it you will get the below error if start running git commands.
+
+(base) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+
+(base) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>git init
+Initialized empty Git repository in C:/Users/arnchand/Desktop/ImportantDoc/Machine-Learning/Krish_Naik/LLM/LangChainProject-2-GeminiPro/.git/
+
+(base) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>git branch -M main
+
+(base) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>git remote add origin https://github.com/Git-of-arnab/LLM-Projects.git
+
+(base) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>git remote -v
+origin  https://github.com/Git-of-arnab/LLM-Projects.git (fetch)
+origin  https://github.com/Git-of-arnab/LLM-Projects.git (push)
+
+(base) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>conda activate venv/
+
+(C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro\venv) C:\Users\arnchand\Desktop\ImportantDoc\Machine-Learning\Krish_Naik\LLM\LangChainProject-2-GeminiPro>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Project_details.txt
+        venv/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+->Create a .gitignore file for python (this will remove all the irrelvant info from the python file while we push our code into git)
+	->Go to repo
+	->Click on Add file->new file
+	->Give the file name '.gitignore'
+	->Give the .gitignore template as python
+	->Click on Commit changes
+	->Go to cmd and run git pull origin main ---- You will be able to see the .gitignore file in the directory
+---------------------------------------------------------**********---------------------------------------------------------------------------
+
+1.You need to create a .env file and store the google api key in order to use google gemini pro
+2.Go to https://aistudio.google.com/app/apikey to create the google API key. Click createt API key for new project. 
+3.Copy the API key generated and paste in the .env file as:
+GOOGLE_API_KEY ="<API_KEY>"
+4.https://faiss.ai/
+Facebook AI Similarity Search (Faiss) is a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss uses arnmin of Euclidean distance between x_i(set of vectors of dimensions 'd' stored in the disk) and x(new vector for similarity search)
+https://python.langchain.com/docs/integrations/vectorstores/faiss

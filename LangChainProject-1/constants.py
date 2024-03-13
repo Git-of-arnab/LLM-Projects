@@ -1,2 +1,3 @@
-openai_key = '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'
+openai_key = ''
 #You can call this variable to use the openAI key wherever required
+#Use your own open_API_Key
